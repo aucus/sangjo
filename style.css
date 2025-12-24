@@ -45,7 +45,12 @@ ul {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-serif);
   color: var(--color-primary);
   font-weight: 700;
@@ -93,14 +98,15 @@ header {
   z-index: 1000;
   transition: background-color 0.3s ease, padding 0.3s ease;
   padding: var(--spacing-md) 0;
-  background-color: transparent; /* Start transparent on hero */
+  background-color: transparent;
+  /* Start transparent on hero */
   color: var(--color-white);
 }
 
 header.scrolled {
   background-color: rgba(26, 26, 26, 0.95);
   padding: var(--spacing-sm) 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Sub pages: 항상 GNB가 보이도록 헤더를 진한 배경으로 고정 */
@@ -152,7 +158,8 @@ nav {
   border-bottom: 2px solid transparent;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--color-accent);
   border-color: var(--color-accent);
 }
@@ -174,7 +181,7 @@ nav {
 .hero {
   height: 100vh;
   /* dist 빌드 시 CSS가 dist/assets/로 이동하므로, public 자산은 ../ 로 접근 */
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../bg-hero.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../bg-hero.png');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -188,7 +195,7 @@ nav {
   font-size: 3.5rem;
   margin-bottom: var(--spacing-md);
   color: var(--color-white);
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content p {
@@ -238,7 +245,7 @@ section {
 
 .product-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   border-color: var(--color-accent);
 }
 
@@ -332,7 +339,7 @@ footer {
   .section-title {
     font-size: 2rem;
   }
-  
+
   .nav-toggle {
     display: inline-flex;
   }
@@ -347,7 +354,7 @@ footer {
     padding: 12px var(--spacing-md) 16px;
     flex-direction: column;
     gap: 12px;
-    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   body.nav-open .nav-links {
@@ -415,5 +422,14 @@ footer {
 
   .form-card {
     padding: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    /* 모바일 전용 이미지가 없거나 로드 실패 시, 기존 hero 이미지로 자동 fallback */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../bg-hero-mobile.png'), url('../bg-hero.png');
+    background-color: #333;
+    /* Fallback */
   }
 }
