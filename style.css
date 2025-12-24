@@ -103,6 +103,15 @@ header.scrolled {
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
+/* Sub pages: 항상 GNB가 보이도록 헤더를 진한 배경으로 고정 */
+body.subpage main {
+  padding-top: 80px;
+}
+
+body.subpage header {
+  background-color: var(--color-primary);
+}
+
 nav {
   display: flex;
   justify-content: space-between;
