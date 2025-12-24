@@ -194,7 +194,7 @@ nav {
 .hero-content h1 {
   font-size: 3.5rem;
   margin-bottom: var(--spacing-md);
-  color: var(--color-white);
+  color: rgba(255, 255, 255, 0.8);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
