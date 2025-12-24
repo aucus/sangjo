@@ -43,7 +43,12 @@
         <div class="container">
             <nav>
                 <a href="./" class="logo">Noble Path <span>.</span></a>
-                <div class="nav-links">
+                <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-controls="site-nav" aria-expanded="false">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+                <div class="nav-links" id="site-nav">
                     <a href="./about.html">회사소개</a>
                     <a href="./products.html">상품소개</a>
                     <a href="./counseling.html">장지상담</a>
@@ -60,8 +65,7 @@
                 <h2 class="section-title">고객센터</h2>
                 <p class="section-subtitle">궁금하신 점이나 가입 문의를 남겨주세요.</p>
 
-                <div
-                    style="max-width: 600px; margin: 0 auto; background: #fff; padding: 40px; border: 1px solid #ddd; border-radius: 8px;">
+                <div class="form-card">
                     <h3 style="margin-bottom: 20px;">온라인 가입/상담 신청</h3>
                     <form onsubmit="alert('상담 신청이 접수되었습니다. 곧 연락드리겠습니다.'); return false;">
                         <div class="form-group">
