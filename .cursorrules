@@ -1,0 +1,31 @@
+# Project: sangjo (Vite + Vanilla JS, MPA)
+You are working in a Vite-powered **multi-page static site**.
+
+## Non-negotiables
+- Work on the **actual runtime entrypoints**:
+  - Pages: `/*.html` (root)
+  - Styles: `/style.css` (root)
+  - Script: `/main.js` (root)
+- `src/` currently contains Vite starter leftovers and is **not referenced by the pages**. Do not “fix” behavior only in `src/` unless you also wire it into the HTML.
+- Do not edit `node_modules/`.
+
+## Architecture / conventions
+- **MPA**: each root `*.html` is a page entry. Keep header/nav/footer consistent across pages.
+- **Shared behavior** belongs in `/main.js` (e.g., nav active state, scroll effects, lightweight DOM enhancements).
+- **Shared styling** belongs in `/style.css` using existing CSS variables and utility patterns.
+- Assets live in `public/` and should be referenced as **absolute paths** (e.g. `/bg-hero.png`).
+
+## Editing guidelines
+- Prefer semantic HTML and accessible defaults:
+  - Images require `alt`
+  - Forms should use proper labels
+- Keep JS minimal and framework-free (no React/Vue/etc. unless explicitly requested).
+- If you need new UI styling, prefer adding classes + updating `/style.css` over large inline `style=""` blocks.
+- When changing nav links or layout, update **all pages** (not just `index.html`).
+
+## Vite commands (for docs/tests)
+- `npm run dev`: dev server
+- `npm run build`: production build
+- `npm run preview`: preview production build
+
+

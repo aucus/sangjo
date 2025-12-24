@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>고객센터 - Noble Path</title>
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        header {
+            background-color: var(--color-primary);
+        }
+
+        main {
+            padding-top: 80px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .form-textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            font-family: inherit;
+            height: 150px;
+            resize: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="./" class="logo">Noble Path <span>.</span></a>
+                <div class="nav-links">
+                    <a href="./about.html">회사소개</a>
+                    <a href="./products.html">상품소개</a>
+                    <a href="./counseling.html">장지상담</a>
+                    <a href="./reviews.html">장례후기</a>
+                    <a href="./support.html">고객센터</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <h2 class="section-title">고객센터</h2>
+                <p class="section-subtitle">궁금하신 점이나 가입 문의를 남겨주세요.</p>
+
+                <div
+                    style="max-width: 600px; margin: 0 auto; background: #fff; padding: 40px; border: 1px solid #ddd; border-radius: 8px;">
+                    <h3 style="margin-bottom: 20px;">온라인 가입/상담 신청</h3>
+                    <form onsubmit="alert('상담 신청이 접수되었습니다. 곧 연락드리겠습니다.'); return false;">
+                        <div class="form-group">
+                            <label class="form-label" for="contact-name">이름</label>
+                            <input id="contact-name" name="name" autocomplete="name" type="text" class="form-input" required placeholder="홍길동">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contact-phone">연락처</label>
+                            <input id="contact-phone" name="phone" autocomplete="tel" type="tel" class="form-input" required placeholder="010-0000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contact-message">문의 내용</label>
+                            <textarea id="contact-message" name="message" class="form-textarea" placeholder="문의하실 내용을 자유롭게 적어주세요."></textarea>
+                        </div>
+                        <button type="submit" class="btn"
+                            style="width: 100%; border: none; cursor: pointer;">신청하기</button>
+                    </form>
+                </div>
+
+                <div style="margin-top: 60px; text-align: center;">
+                    <h3 style="margin-bottom: 20px;">공지사항</h3>
+                    <ul
+                        style="text-align: left; max-width: 800px; margin: 0 auto; border-top: 2px solid var(--color-primary);">
+                        <li
+                            style="border-bottom: 1px solid #ddd; padding: 15px; display: flex; justify-content: space-between;">
+                            <span>[공지] 2024년 하반기 서비스 개편 안내</span>
+                            <span style="color: #888;">2024.12.01</span>
+                        </li>
+                        <li
+                            style="border-bottom: 1px solid #ddd; padding: 15px; display: flex; justify-content: space-between;">
+                            <span>[이벤트] 신규 가입 고객 사은품 증정</span>
+                            <span style="color: #888;">2024.11.15</span>
+                        </li>
+                        <li
+                            style="border-bottom: 1px solid #ddd; padding: 15px; display: flex; justify-content: space-between;">
+                            <span>[뉴스] Noble Path, 소비자 만족도 1위 선정</span>
+                            <span style="color: #888;">2024.10.30</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="./" class="footer-logo">Noble Path</a>
+                <div class="footer-links">
+                    <a href="./about.html">회사소개</a>
+                    <a href="./products.html">이용약관</a>
+                    <a href="./support.html">개인정보처리방침</a>
+                </div>
+                <p>서울특별시 강남구 테헤란로 123 | 대표전화: 1588-0000</p>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Noble Path Sangjo. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+</body>
+
+</html>
